@@ -42,7 +42,7 @@ async function load() {
 watch([search, status, from, to], () => {
   page.value = 1;
   clearTimeout(timer);
-  timer = setTimeout(load, 250);
+  timer = setTimeout(load, 1000);
 });
 watch(page, load);
 onMounted(load);
